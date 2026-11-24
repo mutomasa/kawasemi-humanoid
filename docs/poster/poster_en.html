@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kawasemi Humanoid poster</title>
+<style>
+  @page { size: 841mm 1189mm; margin: 0; }
+  :root {
+    --ink: #1d2430;
+    --muted: #5a6474;
+    --navy: #0b3f73;
+    --blue: #0e7fc0;
+    --blue-bg: #e4f2fa;
+    --orange: #c4601a;
+    --orange-bg: #fdeedf;
+    --gray-bg: #f2f3f5;
+    --line: #c9cfd8;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ffffff; }
+  body {
+    width: 841mm; height: 1189mm; overflow: hidden;
+    font-family: "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+    color: var(--ink); font-size: 27pt; line-height: 1.55;
+    
+  }
+  .page { padding: 0 26mm 16mm; height: 100%; display: flex; flex-direction: column; }
+
+  header {
+    margin: 0 -26mm; padding: 20mm 26mm 14mm;
+    background: linear-gradient(100deg, #0b3f73 0%, #0e6fae 70%, #0e7fc0 100%); color: #fff;
+    border-bottom: 4mm solid #ef8a35;
+  }
+  header .en { font-size: 58pt; font-weight: 700; line-height: 1.18; letter-spacing: -0.5pt; }
+  header .ja { font-size: 44pt; font-weight: 500; margin-top: 6mm; opacity: .95; }
+  header .who { margin-top: 9mm; font-size: 28pt; opacity: .85; display: flex; gap: 18mm; }
+  header .badge { display: inline-block; font-size: 24pt; font-weight: 700; padding: 1mm 5mm; border-radius: 2mm; background: #fff; color: var(--navy); margin-bottom: 6mm; }
+
+  .claim {
+    margin: 12mm 0 0; padding: 9mm 14mm;
+    border-left: 5mm solid var(--blue); background: var(--blue-bg);
+    font-size: 32pt; line-height: 1.6; font-weight: 500;
+  }
+  .claim b { color: var(--navy); }
+  .claim .tag { display: block; font-size: 24pt; color: var(--blue); font-weight: 700; margin-bottom: 2mm; letter-spacing: 1pt; }
+
+  .grid { display: grid; gap: 10mm 16mm; margin-top: 10mm; }
+  .top { grid-template-columns: 1fr 1.25fr; }
+  .bottom { grid-template-columns: 1fr 1fr 1fr; flex: 1; }
+  section h2 {
+    font-size: 38pt; margin: 0 0 5mm; padding-bottom: 2.5mm;
+    color: var(--navy); border-bottom: 1.2mm solid var(--navy);
+    display: flex; align-items: baseline; gap: 5mm;
+  }
+  section h2 .n {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 15mm; height: 15mm; border-radius: 50%;
+    background: var(--navy); color: #fff; font-size: 26pt; flex: none;
+    transform: translateY(-1mm);
+  }
+  section + section { margin-top: 11mm; }
+  h3 { font-size: 29pt; margin: 6mm 0 2mm; color: var(--blue); }
+  p { margin: 0 0 3mm; }
+  ul, ol { margin: 0 0 3mm; padding-left: 1.3em; }
+  li { margin-bottom: 1.5mm; }
+  .small { font-size: 23pt; color: var(--muted); line-height: 1.5; }
+  .key { color: var(--blue); font-weight: 700; }
+  .warn { color: var(--orange); font-weight: 700; }
+
+  figure { margin: 0; }
+  .concept { border: 0.6mm solid var(--line); border-radius: 3mm; overflow: hidden; }
+  .concept img { width: 100%; display: block; }
+  .arch { border: 0.6mm solid var(--line); border-radius: 3mm; padding: 4mm; background: #fff; }
+  .arch svg { width: 100%; display: block; }
+  figcaption { font-size: 21pt; color: var(--muted); margin-top: 2.5mm; line-height: 1.45; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 22pt; line-height: 1.38; }
+  th, td { padding: 2.2mm 3mm; border-bottom: 0.4mm solid var(--line); text-align: left; vertical-align: top; }
+  th { background: var(--gray-bg); font-weight: 700; white-space: nowrap; }
+  td.id { font-weight: 700; color: var(--navy); white-space: nowrap; }
+  tr.prop td { background: var(--blue-bg); }
+
+  .learn { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin: 3mm 0 0; }
+  .learn div { padding: 3mm 4mm; border-radius: 2.5mm; background: var(--gray-bg); font-size: 22pt; line-height: 1.35; }
+  .learn div b { display: block; color: var(--navy); font-size: 24pt; }
+
+  .eq { font-family: "DejaVu Serif", serif; font-size: 25pt; line-height: 1.7; text-align: center; padding: 3mm 0; background: var(--gray-bg); border-radius: 2.5mm; margin: 3mm 0; }
+  .eq i { font-style: italic; }
+
+  .tl { list-style: none; padding: 0; margin: 0; position: relative; }
+  .tl::before { content: ""; position: absolute; left: 4mm; top: 3mm; bottom: 3mm; width: 0.8mm; background: var(--line); }
+  .tl li { position: relative; padding-left: 14mm; margin-bottom: 3mm; font-size: 22pt; line-height: 1.38; }
+  .tl li::before { content: ""; position: absolute; left: 1.2mm; top: 2.2mm; width: 6.4mm; height: 6.4mm; border-radius: 50%; background: #fff; border: 0.8mm solid var(--muted); }
+  .tl li.now::before { background: var(--orange); border-color: var(--orange); }
+  .tl li.now .when { color: var(--orange); }
+  .tl .when { font-weight: 700; color: var(--navy); display: block; }
+  .tl .out { display: block; color: var(--muted); font-size: 20pt; }
+
+  .min { padding: 6mm 8mm; border: 0.8mm solid var(--navy); border-radius: 3mm; }
+  .min ul { margin: 0; }
+
+  .refs { font-size: 18pt; color: var(--muted); line-height: 1.45; margin-top: 7mm; padding-top: 4mm; border-top: 0.4mm solid var(--line); }
+  .refs ol { padding-left: 1.4em; margin: 0; }
+  figcaption b { color: var(--navy); }
+  body { font-size: 26pt; }
+  section + section { margin-top: 9mm; }
+  .small { font-size: 22pt; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="badge">Side project: learning humanoids and VLA by building one</div>
+  <div class="en">Kawasemi Humanoid: Building a 3D-Printed Humanoid<br>as a Platform for VLA and Failure-Aware Embodied AI</div>
+  <div class="ja">An original small humanoid, built step by step from one arm to VLA manipulation and bipedal walking</div>
+  <div class="who"><span>Masahiro Muto</span><span>Personal project (planning and early design)</span><span>Target: January 2028</span></div>
+</header>
+
+<div class="claim">
+  <span class="tag">MOTIVATION</span>
+  Research on VLA and world models usually runs on off-the-shelf robots, so the <b>joints, gearboxes, power and low-level control</b> stay a black box. Using <b>Berkeley Humanoid Lite</b> as a technical reference, I am building an original small humanoid in the order <b>CAD → 3D printing → ROS 2 → VLA → bipedal walking</b>, and turning it into a real-robot platform for my research.
+</div>
+
+<div class="grid top">
+  <div>
+    <section>
+      <h2><span class="n">1</span>What I am building</h2>
+      <p>An <b>original small humanoid</b> made with a Bambu Lab P2S and Autodesk Fusion. It is not a copy of BHL: the body shape and joints are my own design.</p>
+      <table>
+        <tr><th>Item</th><th>Target (initial)</th></tr>
+        <tr><td class="id">Height</td><td>60–90 cm (tentative)</td></tr>
+        <tr><td class="id">DoF</td><td>6–7 per arm (12–14 for both), 6–7 per leg</td></tr>
+        <tr><td class="id">Hands</td><td>Grippers first, multi-fingered hands later</td></tr>
+        <tr><td class="id">Frame</td><td>3D-printed PLA / PETG / ASA + metal reinforcement, TPU soles</td></tr>
+        <tr><td class="id">Drive</td><td>BLDC motors + reducers (custom cycloidal or commercial)</td></tr>
+        <tr><td class="id">Compute</td><td>Raspberry Pi 5 / Jetson + STM32 over CAN</td></tr>
+        <tr><td class="id">Sensors</td><td>RGB-D camera, IMU, joint encoders, tactile (later)</td></tr>
+        <tr><td class="id">Software</td><td>Ubuntu + ROS 2, LeRobot, MuJoCo / Isaac Lab</td></tr>
+      </table>
+      <p class="small" style="margin-top:3mm">Height and DoF are not fixed up front. They will be set after checking actuator torque, body weight, power capacity and cost.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">2</span>What I learn along the way</h2>
+      <div class="learn">
+        <div><b>Mechanical design</b>CAD in Fusion, splitting parts for the P2S build volume, fits and tolerances</div>
+        <div><b>Actuators</b>Cycloidal reducers; measuring backlash, heat and wear</div>
+        <div><b>Kinematics &amp; dynamics</b>FK/IK, Jacobians, floating-base whole-body dynamics</div>
+        <div><b>ROS 2 integration</b>ros2_control, CAN, syncing joint states and cameras</div>
+        <div><b>VLA &amp; imitation</b>Teleoperated data collection, training SmolVLA / ACT</div>
+        <div><b>Bipedal walking</b>RL in MuJoCo / Isaac Lab, Sim2Real, whole-body control</div>
+      </div>
+    </section>
+  </div>
+
+  <div>
+    <section>
+      <h2><span class="n">3</span>Development order</h2>
+      <figure class="arch">
+        <svg viewBox="0 0 900 430" role="img" aria-label="Development order: one arm, both arms and upper body, VLA, lower body, bipedal walking, then whole-body VLA">
+          <defs>
+            <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d2430"/></marker>
+          </defs>
+          <g font-family="Noto Sans CJK JP" text-anchor="middle">
+            <text x="20" y="34" font-size="22" font-weight="700" fill="#0e7fc0" text-anchor="start">Manipulation (VLA, imitation learning, vision-touch)</text>
+            <rect x="20" y="50" width="250" height="110" rx="14" fill="#e4f2fa" stroke="#0e7fc0" stroke-width="3"/>
+            <text x="145" y="98" font-size="26" font-weight="700" fill="#0b3f73">① One arm</text>
+            <text x="145" y="132" font-size="18">Joint prototype, ROS 2</text>
+            <rect x="325" y="50" width="250" height="110" rx="14" fill="#e4f2fa" stroke="#0e7fc0" stroke-width="3"/>
+            <text x="450" y="98" font-size="26" font-weight="700" fill="#0b3f73">② Upper body</text>
+            <text x="450" y="132" font-size="18">Teleop, data collection</text>
+            <rect x="630" y="50" width="250" height="110" rx="14" fill="#e4f2fa" stroke="#0e7fc0" stroke-width="3"/>
+            <text x="755" y="98" font-size="26" font-weight="700" fill="#0b3f73">③ VLA</text>
+            <text x="755" y="132" font-size="18">Language-driven grasping</text>
+            <line x1="270" y1="105" x2="321" y2="105" stroke="#1d2430" stroke-width="3" marker-end="url(#o)"/>
+            <line x1="575" y1="105" x2="626" y2="105" stroke="#1d2430" stroke-width="3" marker-end="url(#o)"/>
+            <path d="M755,160 L755,200 L145,200 L145,236" fill="none" stroke="#1d2430" stroke-width="3" marker-end="url(#o)"/>
+            <rect x="20" y="240" width="250" height="110" rx="14" fill="#fdeedf" stroke="#c4601a" stroke-width="3"/>
+            <text x="145" y="288" font-size="26" font-weight="700" fill="#c4601a">④ Lower body</text>
+            <text x="145" y="322" font-size="18">Legs, torque sizing</text>
+            <rect x="325" y="240" width="250" height="110" rx="14" fill="#fdeedf" stroke="#c4601a" stroke-width="3"/>
+            <text x="450" y="288" font-size="26" font-weight="700" fill="#c4601a">⑤ Bipedal walking</text>
+            <text x="450" y="322" font-size="18">RL, Sim2Real</text>
+            <rect x="630" y="240" width="250" height="110" rx="14" fill="#fff" stroke="#0b3f73" stroke-width="4"/>
+            <text x="755" y="288" font-size="26" font-weight="700" fill="#0b3f73">⑥ Whole-body VLA</text>
+            <text x="755" y="322" font-size="18">Manipulate while walking</text>
+            <line x1="270" y1="295" x2="321" y2="295" stroke="#1d2430" stroke-width="3" marker-end="url(#o)"/>
+            <line x1="575" y1="295" x2="626" y2="295" stroke="#1d2430" stroke-width="3" marker-end="url(#o)"/>
+            <text x="20" y="398" font-size="22" font-weight="700" fill="#c4601a" text-anchor="start">Locomotion (dynamics, balance control, reinforcement learning)</text>
+          </g>
+        </svg>
+      </figure>
+      <figcaption>VLA research comes first, so I <b>build the upper body first</b>. Manipulation and walking need different skills, so the legs come once manipulation is stable. VLA starts early on an SO-101 arm, and walking RL starts in simulation.</figcaption>
+    </section>
+
+    <section>
+      <h2><span class="n">4</span>What I take from Berkeley Humanoid Lite</h2>
+      <table>
+        <tr><th>Source</th><th>Features</th><th>How I use it</th></tr>
+        <tr><td class="id">BHL V1</td><td>3D-printed mechanism, cycloidal reducers, RL walking in Isaac Lab</td><td>Joint units, printing workflow</td></tr>
+        <tr><td class="id">BHL Arm v1.5</td><td>3D-printed bimanual arms, LeRobot support, teleop</td><td>Data collection for VLA</td></tr>
+        <tr><td class="id">BHL V2</td><td>URDF / MJCF / Xacro, RobStride-type actuators</td><td>ROS 2 and simulation setup</td></tr>
+      </table>
+      <p class="small" style="margin-top:3mm">V1 and V2 actuators are not interchangeable. The official print settings target the X1C, so dimensions are re-checked on the P2S.</p>
+    </section>
+  </div>
+</div>
+
+<div class="grid bottom">
+  <div>
+    <section>
+      <h2><span class="n">5</span>System architecture</h2>
+      <figure class="arch">
+        <svg viewBox="0 0 640 700" role="img" aria-label="Architecture: VLA, world model and agent on ROS 2, a safety monitor layer, microcontroller joint control, actuators, sensors and separate power rails">
+          <defs>
+            <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d2430"/></marker>
+          </defs>
+          <g font-family="Noto Sans CJK JP" text-anchor="middle">
+            <rect x="10" y="10" width="440" height="256" rx="14" fill="#e4f2fa" stroke="#0e7fc0" stroke-width="3"/>
+            <text x="230" y="46" font-size="24" font-weight="700" fill="#0b3f73">Raspberry Pi 5 / Jetson (ROS 2)</text>
+            <rect x="34" y="66" width="392" height="48" rx="8" fill="#fff" stroke="#9fb6cc"/>
+            <text x="230" y="98" font-size="20">Agent (task management, recovery)</text>
+            <rect x="34" y="126" width="392" height="48" rx="8" fill="#fff" stroke="#9fb6cc"/>
+            <text x="230" y="158" font-size="20">VLA inference, vision-tactile world model</text>
+            <rect x="34" y="186" width="392" height="48" rx="8" fill="#fff" stroke="#9fb6cc"/>
+            <text x="230" y="218" font-size="20">Manipulation / locomotion controllers</text>
+            <rect x="10" y="306" width="440" height="64" rx="14" fill="#fff" stroke="#c4601a" stroke-width="3"/>
+            <text x="230" y="346" font-size="21" font-weight="700" fill="#c4601a">Safety monitor (range &amp; torque checks)</text>
+            <line x1="230" y1="266" x2="230" y2="302" stroke="#1d2430" stroke-width="2.5" marker-end="url(#a)"/>
+            <rect x="10" y="410" width="440" height="90" rx="14" fill="#fdeedf" stroke="#c4601a" stroke-width="3"/>
+            <text x="230" y="448" font-size="24" font-weight="700" fill="#c4601a">STM32 etc. (CAN)</text>
+            <text x="230" y="480" font-size="18">Fast joint control, link-loss watchdog</text>
+            <line x1="230" y1="370" x2="230" y2="406" stroke="#1d2430" stroke-width="2.5" marker-end="url(#a)"/>
+            <rect x="10" y="540" width="210" height="90" rx="14" fill="#fff" stroke="#5a6474" stroke-width="2"/>
+            <text x="115" y="578" font-size="22" font-weight="700">Joint actuators</text>
+            <text x="115" y="608" font-size="18">BLDC + reducer</text>
+            <line x1="115" y1="500" x2="115" y2="536" stroke="#1d2430" stroke-width="2.5" marker-end="url(#a)"/>
+            <rect x="240" y="540" width="210" height="90" rx="14" fill="#fff" stroke="#5a6474" stroke-width="2"/>
+            <text x="345" y="578" font-size="22" font-weight="700">Sensors</text>
+            <text x="345" y="608" font-size="18">RGB-D, IMU, tactile</text>
+            <path d="M450,585 L480,585 L480,150 L454,150" fill="none" stroke="#1d2430" stroke-width="2.5" marker-end="url(#a)"/>
+            <rect x="500" y="10" width="130" height="620" rx="14" fill="#f2f3f5" stroke="#5a6474" stroke-width="2"/>
+            <text x="565" y="50" font-size="22" font-weight="700">Power</text>
+            <text x="565" y="84" font-size="17">Battery</text>
+            <text x="565" y="108" font-size="17">BMS, fuses</text>
+            <text x="565" y="256" font-size="17" fill="#0e7fc0" font-weight="700">Compute rail</text>
+            <text x="565" y="560" font-size="17" fill="#c4601a" font-weight="700">Motor rail</text>
+            <text x="565" y="584" font-size="16" fill="#5a6474">kept separate</text>
+            <line x1="500" y1="236" x2="454" y2="200" stroke="#0e7fc0" stroke-width="3" stroke-dasharray="8 5"/>
+            <path d="M565,630 L565,650 L115,650 L115,634" fill="none" stroke="#c4601a" stroke-width="3" stroke-dasharray="8 5"/>
+            <text x="320" y="688" font-size="20" font-weight="700" fill="#c4601a">Physical e-stop, motor power cut-off</text>
+          </g>
+        </svg>
+      </figure>
+      <figcaption>Joint commands from learned models never go straight to the motors; the safety monitor checks them first. Fast joint control and safe stop live on the microcontroller.</figcaption>
+    </section>
+
+    <section>
+      <h2><span class="n">6</span>Actuators: custom vs. commercial</h2>
+      <table>
+        <tr><th>Type</th><th>Pros</th><th>Cons</th></tr>
+        <tr><td class="id">Custom</td><td>Learn the mechanism in depth, adjustable ratio</td><td>Wear, backlash, heat</td></tr>
+        <tr><td class="id">Commercial</td><td>Less tuning, faster path to VLA</td><td>Cost, size and weight limits</td></tr>
+      </table>
+      <p class="small" style="margin-top:3mm"><b>Move VLA forward on commercial actuators while developing custom joint units in parallel.</b> The single-joint evaluation in March 2027 decides which one leads.</p>
+    </section>
+  </div>
+
+  <div>
+    <section>
+      <h2><span class="n">7</span>VLA tasks</h2>
+      <p>No walking at first: a fixed upper body and two arms manipulate objects. Data is collected with LeRobot to compare SmolVLA, ACT and Diffusion Policy.</p>
+      <table>
+        <tr><th>Task</th><th>Example instruction</th><th>Metrics</th></tr>
+        <tr><td class="id">1 Grasp</td><td>"Pick up the red block"</td><td>Grasp success, position error</td></tr>
+        <tr><td class="id">2 Pick &amp; place</td><td>"Put the blue block in the right box"</td><td>Recognition, grasp, placement success</td></tr>
+        <tr><td class="id">3 Bimanual</td><td>"Hold the box with your left hand, take the item out with your right"</td><td>Coordination success, contact stability</td></tr>
+        <tr><td class="id">4 Recovery</td><td>"Re-grasp the object that slipped"</td><td>Failure detection, recovery success</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="n">8</span>Vision-tactile world model</h2>
+      <p>A latent state learned from vision, joint states and touch predicts action outcomes and failures, bringing my main research theme to the humanoid.</p>
+      <div class="eq"><i>z</i><sub><i>t</i></sub> = <i>E</i>(<i>o</i><sub><i>t</i></sub>),&ensp; <i>ẑ</i><sub><i>t</i>+1</sub> = <i>F</i>(<i>z</i><sub><i>t</i></sub>, <i>a</i><sub><i>t</i></sub>)<br><i>e</i><sub><i>t</i></sub> = ‖<i>z</i><sub><i>t</i>+1</sub> − <i>ẑ</i><sub><i>t</i>+1</sub>‖²</div>
+      <p class="small">The error <i>e</i><sub><i>t</i></sub> is an anomaly feature, combined with task state and contact before calling a failure. Targets: slips, failed grasps and recovery.</p>
+    </section>
+
+    <section>
+      <h2><span class="n">9</span>Cautions</h2>
+      <ul>
+        <li><b>Safety.</b> Physical e-stop, joint torque and angle limits, temperature monitoring; walking tests on a support rig</li>
+        <li><b>Cost.</b> Budget caps of ¥200–500k up to the upper body and ¥0.5–1M+ including legs; buy in stages</li>
+        <li><b>Licenses.</b> Check each BHL repository before reusing its CAD or code</li>
+      </ul>
+    </section>
+  </div>
+
+  <div>
+    <section>
+      <h2><span class="n">10</span>Schedule</h2>
+      <ul class="tl">
+        <li class="now"><span class="when">Dec 2026 – Jan 2027: Phase 0 setup</span>Study the reference designs, view them in MuJoCo / RViz2, initial BOM; start VLA on an SO-101</li>
+        <li><span class="when">Jan – Mar 2027: Phase 1 actuators</span>Prototype a single joint; measure torque, backlash and heat<span class="out">→ choose custom or commercial</span></li>
+        <li><span class="when">Mar – Jul 2027: Phases 2–3 arm → upper body</span>ROS 2, both arms and torso, 50 teleop episodes per task</li>
+        <li><span class="when">Jul – Oct 2027: Phase 4 VLA</span>Train SmolVLA / ACT on real-robot data<span class="out">→ ≥70% success on Tasks 1–2</span></li>
+        <li><span class="when">Apr – Dec 2027: Phase 5 legs &amp; walking</span>Walking RL in simulation, print legs, full assembly, walking on a support rig</li>
+        <li><span class="when">Jan 2028: complete</span>Whole-body integration tests and demo</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">11</span>Done by January 2028</h2>
+      <div class="min">
+        <ul>
+          <li>The full original humanoid is assembled</li>
+          <li>The upper body does language-instructed pick &amp; place at ≥70% success</li>
+          <li>Standing and walking forward a few metres on a support rig</li>
+          <li>ROS 2, the safety monitor and data collection run, reproducible from the repository</li>
+        </ul>
+      </div>
+      <p class="small" style="margin-top:3mm">Manipulation while walking (Phase 6) and self-improvement with world models and Agentic AI (Phase 7) are stretch goals from February 2028.</p>
+    </section>
+
+    <div class="refs">
+      <ol>
+        <li>Y. Chi et al., Berkeley Humanoid Lite, arXiv:2504.17249, 2025.</li>
+        <li>Berkeley Humanoid Lite Arm, github.com/berkeley-humanoids</li>
+        <li>M. Shukor et al., SmolVLA, arXiv:2506.01844, 2025.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>Kawasemi Humanoid ポスター</title>
+<style>
+  @page { size: 841mm 1189mm; margin: 0; }
+  :root {
+    --ink: #1d2430;
+    --muted: #5a6474;
+    --navy: #0b3f73;
+    --blue: #0e7fc0;
+    --blue-bg: #e4f2fa;
+    --orange: #c4601a;
+    --orange-bg: #fdeedf;
+    --gray-bg: #f2f3f5;
+    --line: #c9cfd8;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #ffffff; }
+  body {
+    width: 841mm; height: 1189mm; overflow: hidden;
+    font-family: "Noto Sans CJK JP", "Noto Sans JP", sans-serif;
+    color: var(--ink); font-size: 27pt; line-height: 1.55;
+    font-feature-settings: "palt";
+  }
+  .page { padding: 0 26mm 16mm; height: 100%; display: flex; flex-direction: column; }
+
+  header {
+    margin: 0 -26mm; padding: 20mm 26mm 14mm;
+    background: linear-gradient(100deg, #0b3f73 0%, #0e6fae 70%, #0e7fc0 100%); color: #fff;
+    border-bottom: 4mm solid #ef8a35;
+  }
+  header .en { font-size: 58pt; font-weight: 700; line-height: 1.18; letter-spacing: -0.5pt; }
+  header .ja { font-size: 44pt; font-weight: 500; margin-top: 6mm; opacity: .95; }
+  header .who { margin-top: 9mm; font-size: 28pt; opacity: .85; display: flex; gap: 18mm; }
+  header .badge { display: inline-block; font-size: 24pt; font-weight: 700; padding: 1mm 5mm; border-radius: 2mm; background: #fff; color: var(--navy); margin-bottom: 6mm; }
+
+  .claim {
+    margin: 12mm 0 0; padding: 9mm 14mm;
+    border-left: 5mm solid var(--blue); background: var(--blue-bg);
+    font-size: 32pt; line-height: 1.6; font-weight: 500;
+  }
+  .claim b { color: var(--navy); }
+  .claim .tag { display: block; font-size: 24pt; color: var(--blue); font-weight: 700; margin-bottom: 2mm; letter-spacing: 1pt; }
+
+  .grid { display: grid; gap: 10mm 16mm; margin-top: 10mm; }
+  .top { grid-template-columns: 1fr 1.25fr; }
+  .bottom { grid-template-columns: 1fr 1fr 1fr; flex: 1; }
+  section h2 {
+    font-size: 38pt; margin: 0 0 5mm; padding-bottom: 2.5mm;
+    color: var(--navy); border-bottom: 1.2mm solid var(--navy);
+    display: flex; align-items: baseline; gap: 5mm;
+  }
+  section h2 .n {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 15mm; height: 15mm; border-radius: 50%;
+    background: var(--navy); color: #fff; font-size: 26pt; flex: none;
+    transform: translateY(-1mm);
+  }
+  section + section { margin-top: 11mm; }
+  h3 { font-size: 29pt; margin: 6mm 0 2mm; color: var(--blue); }
+  p { margin: 0 0 3mm; }
+  ul, ol { margin: 0 0 3mm; padding-left: 1.3em; }
+  li { margin-bottom: 1.5mm; }
+  .small { font-size: 23pt; color: var(--muted); line-height: 1.5; }
+  .key { color: var(--blue); font-weight: 700; }
+  .warn { color: var(--orange); font-weight: 700; }
+
+  figure { margin: 0; }
+  .concept { border: 0.6mm solid var(--line); border-radius: 3mm; overflow: hidden; }
+  .concept img { width: 100%; display: block; }
+  .arch { border: 0.6mm solid var(--line); border-radius: 3mm; padding: 4mm; background: #fff; }
+  .arch svg { width: 100%; display: block; }
+  figcaption { font-size: 21pt; color: var(--muted); margin-top: 2.5mm; line-height: 1.45; }
+
+  table { width: 100%; border-collapse: collapse; font-size: 22pt; line-height: 1.38; }
+  th, td { padding: 2.2mm 3mm; border-bottom: 0.4mm solid var(--line); text-align: left; vertical-align: top; }
+  th { background: var(--gray-bg); font-weight: 700; white-space: nowrap; }
+  td.id { font-weight: 700; color: var(--navy); white-space: nowrap; }
+  tr.prop td { background: var(--blue-bg); }
+
+  .learn { display: grid; grid-template-columns: 1fr 1fr; gap: 3mm; margin: 3mm 0 0; }
+  .learn div { padding: 3mm 4mm; border-radius: 2.5mm; background: var(--gray-bg); font-size: 22pt; line-height: 1.35; }
+  .learn div b { display: block; color: var(--navy); font-size: 24pt; }
+
+  .eq { font-family: "DejaVu Serif", serif; font-size: 25pt; line-height: 1.7; text-align: center; padding: 3mm 0; background: var(--gray-bg); border-radius: 2.5mm; margin: 3mm 0; }
+  .eq i { font-style: italic; }
+
+  .tl { list-style: none; padding: 0; margin: 0; position: relative; }
+  .tl::before { content: ""; position: absolute; left: 4mm; top: 3mm; bottom: 3mm; width: 0.8mm; background: var(--line); }
+  .tl li { position: relative; padding-left: 14mm; margin-bottom: 3mm; font-size: 22pt; line-height: 1.38; }
+  .tl li::before { content: ""; position: absolute; left: 1.2mm; top: 2.2mm; width: 6.4mm; height: 6.4mm; border-radius: 50%; background: #fff; border: 0.8mm solid var(--muted); }
+  .tl li.now::before { background: var(--orange); border-color: var(--orange); }
+  .tl li.now .when { color: var(--orange); }
+  .tl .when { font-weight: 700; color: var(--navy); display: block; }
+  .tl .out { display: block; color: var(--muted); font-size: 20pt; }
+
+  .min { padding: 6mm 8mm; border: 0.8mm solid var(--navy); border-radius: 3mm; }
+  .min ul { margin: 0; }
+
+  .refs { font-size: 18pt; color: var(--muted); line-height: 1.45; margin-top: 7mm; padding-top: 4mm; border-top: 0.4mm solid var(--line); }
+  .refs ol { padding-left: 1.4em; margin: 0; }
+  figcaption b { color: var(--navy); }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="badge">サブプロジェクト：作りながらヒューマノイドと VLA を学ぶ</div>
+  <div class="en">Kawasemi Humanoid: Building a 3D-Printed Humanoid<br>as a Platform for VLA and Failure-Aware Embodied AI</div>
+  <div class="ja">カワセミ・ヒューマノイド ― 3D プリント製の人型ロボットを自作し、VLA と二足歩行を段階的に載せる</div>
+  <div class="who"><span>武藤 雅裕</span><span>個人プロジェクト（計画・初期設計の段階）</span><span>完成目標：2028 年 1 月</span></div>
+</header>
+
+<div class="claim">
+  <span class="tag">ねらい</span>
+  VLA や世界モデルの研究では既製のロボットを使うので、<b>関節・減速機・電源・低レベル制御</b>は中身を知らないまま使いがちである。<b>Berkeley Humanoid Lite</b> を技術的な参考にして、オリジナルの小型ヒューマノイドを <b>CAD 設計 → 3D プリント → ROS 2 → VLA → 二足歩行</b>の順に自分で作り、研究で使える実機プラットフォームにする。
+</div>
+
+<div class="grid top">
+  <div>
+    <section>
+      <h2><span class="n">1</span>何を作るか</h2>
+      <p>Bambu Lab P2S と Autodesk Fusion で作る<b>オリジナルの小型ヒューマノイド</b>。BHL のコピーではなく、形状と関節は自分で設計する。</p>
+      <table>
+        <tr><th>項目</th><th>目標（初期案）</th></tr>
+        <tr><td class="id">高さ</td><td>60〜90 cm（暫定）</td></tr>
+        <tr><td class="id">自由度</td><td>片腕 6〜7、両腕 12〜14、片脚 6〜7</td></tr>
+        <tr><td class="id">ハンド</td><td>初期はグリッパ、将来は多指ハンド</td></tr>
+        <tr><td class="id">フレーム</td><td>3D プリント（PLA / PETG / ASA）＋金属補強、足裏は TPU</td></tr>
+        <tr><td class="id">駆動</td><td>BLDC モータ＋減速機（自作サイクロイド or 市販関節）</td></tr>
+        <tr><td class="id">計算機</td><td>Raspberry Pi 5 / Jetson ＋ STM32（CAN）</td></tr>
+        <tr><td class="id">センサ</td><td>RGB-D カメラ、IMU、関節エンコーダ、触覚（将来）</td></tr>
+        <tr><td class="id">ソフト</td><td>Ubuntu ＋ ROS 2、LeRobot、MuJoCo / Isaac Lab</td></tr>
+      </table>
+      <p class="small" style="margin-top:3mm">身長と自由度は最初に決めない。アクチュエータのトルク、機体重量、電源容量、費用を確かめてから決める。</p>
+    </section>
+
+    <section>
+      <h2><span class="n">2</span>作りながら学ぶこと</h2>
+      <div class="learn">
+        <div><b>機械設計</b>Fusion で CAD、P2S の造形範囲に合わせた分割、嵌合公差</div>
+        <div><b>アクチュエータ</b>サイクロイド減速機、バックラッシュ・発熱・摩耗の計測</div>
+        <div><b>運動学・動力学</b>順・逆運動学、ヤコビアン、浮遊基底の全身動力学</div>
+        <div><b>ROS 2 統合</b>ros2_control、CAN、関節状態とカメラの同期</div>
+        <div><b>VLA・模倣学習</b>テレオペでデータ収集、SmolVLA / ACT の学習</div>
+        <div><b>二足歩行</b>MuJoCo / Isaac Lab での RL、Sim2Real、全身制御</div>
+      </div>
+    </section>
+  </div>
+
+  <div>
+    <section>
+      <h2><span class="n">3</span>開発の順番</h2>
+      <figure class="arch">
+        <svg viewBox="0 0 900 430" role="img" aria-label="片腕、両腕・上半身、VLA、下半身、二足歩行、全身協調 VLA の順に開発する流れ">
+          <defs>
+            <marker id="o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d2430"/></marker>
+          </defs>
+          <g font-family="Noto Sans CJK JP" text-anchor="middle">
+            <text x="20" y="34" font-size="22" font-weight="700" fill="#0e7fc0" text-anchor="start">物体操作（VLA・模倣学習・視触覚）</text>
+            <rect x="20" y="50" width="250" height="110" rx="14" fill="#e4f2fa" stroke="#0e7fc0" stroke-width="3"/>
+            <text x="145" y="98" font-size="26" font-weight="700" fill="#0b3f73">① 片腕</text>
+            <text x="145" y="132" font-size="18">関節試作・ROS 2</text>
+            <rect x="325" y="50" width="250" height="110" rx="14" fill="#e4f2fa" stroke="#0e7fc0" stroke-width="3"/>
+            <text x="450" y="98" font-size="26" font-weight="700" fill="#0b3f73">② 両腕・上半身</text>
+            <text x="450" y="132" font-size="18">テレオペ・データ収集</text>
+            <rect x="630" y="50" width="250" height="110" rx="14" fill="#e4f2fa" stroke="#0e7fc0" stroke-width="3"/>
+            <text x="755" y="98" font-size="26" font-weight="700" fill="#0b3f73">③ VLA</text>
+            <text x="755" y="132" font-size="18">言語指示で物体操作</text>
+            <line x1="270" y1="105" x2="321" y2="105" stroke="#1d2430" stroke-width="3" marker-end="url(#o)"/>
+            <line x1="575" y1="105" x2="626" y2="105" stroke="#1d2430" stroke-width="3" marker-end="url(#o)"/>
+            <path d="M755,160 L755,200 L145,200 L145,236" fill="none" stroke="#1d2430" stroke-width="3" marker-end="url(#o)"/>
+            <rect x="20" y="240" width="250" height="110" rx="14" fill="#fdeedf" stroke="#c4601a" stroke-width="3"/>
+            <text x="145" y="288" font-size="26" font-weight="700" fill="#c4601a">④ 下半身</text>
+            <text x="145" y="322" font-size="18">脚部設計・トルク計算</text>
+            <rect x="325" y="240" width="250" height="110" rx="14" fill="#fdeedf" stroke="#c4601a" stroke-width="3"/>
+            <text x="450" y="288" font-size="26" font-weight="700" fill="#c4601a">⑤ 二足歩行</text>
+            <text x="450" y="322" font-size="18">RL・Sim2Real</text>
+            <rect x="630" y="240" width="250" height="110" rx="14" fill="#fff" stroke="#0b3f73" stroke-width="4"/>
+            <text x="755" y="288" font-size="26" font-weight="700" fill="#0b3f73">⑥ 全身協調 VLA</text>
+            <text x="755" y="322" font-size="18">移動しながら操作</text>
+            <line x1="270" y1="295" x2="321" y2="295" stroke="#1d2430" stroke-width="3" marker-end="url(#o)"/>
+            <line x1="575" y1="295" x2="626" y2="295" stroke="#1d2430" stroke-width="3" marker-end="url(#o)"/>
+            <text x="20" y="398" font-size="22" font-weight="700" fill="#c4601a" text-anchor="start">移動（動力学・姿勢制御・強化学習）</text>
+          </g>
+        </svg>
+      </figure>
+      <figcaption>VLA の研究を優先して<b>上半身から作る</b>。操作と歩行は必要な技術が違うので、操作が安定してから下半身に進む。VLA は SO-101、歩行 RL はシミュレーションで先に始める。</figcaption>
+    </section>
+
+    <section>
+      <h2><span class="n">4</span>Berkeley Humanoid Lite から参考にするもの</h2>
+      <table>
+        <tr><th>参考元</th><th>特徴</th><th>使い方</th></tr>
+        <tr><td class="id">BHL V1</td><td>3D プリント機構、サイクロイド減速機、Isaac Lab で RL 歩行</td><td>関節ユニットと印刷手順</td></tr>
+        <tr><td class="id">BHL Arm v1.5</td><td>3D プリント製双腕、LeRobot 対応、テレオペ</td><td>VLA 用のデータ収集</td></tr>
+        <tr><td class="id">BHL V2</td><td>URDF / MJCF / Xacro、RobStride 系アクチュエータ</td><td>ROS 2 とシミュレーション構成</td></tr>
+      </table>
+      <p class="small" style="margin-top:3mm">V1 と V2 のアクチュエータは互換ではない。公式の印刷条件は X1C 向けなので、P2S では寸法を確かめ直す。</p>
+    </section>
+  </div>
+</div>
+
+<div class="grid bottom">
+  <div>
+    <section>
+      <h2><span class="n">5</span>システム構成</h2>
+      <figure class="arch">
+        <svg viewBox="0 0 640 700" role="img" aria-label="ROS 2 上の VLA・世界モデル・エージェント、安全監視層、マイコンの関節制御、アクチュエータとセンサ、電源の構成図">
+          <defs>
+            <marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1d2430"/></marker>
+          </defs>
+          <g font-family="Noto Sans CJK JP" text-anchor="middle">
+            <rect x="10" y="10" width="440" height="256" rx="14" fill="#e4f2fa" stroke="#0e7fc0" stroke-width="3"/>
+            <text x="230" y="46" font-size="24" font-weight="700" fill="#0b3f73">Raspberry Pi 5 / Jetson（ROS 2）</text>
+            <rect x="34" y="66" width="392" height="48" rx="8" fill="#fff" stroke="#9fb6cc"/>
+            <text x="230" y="98" font-size="20">Agent（タスク管理・失敗回復）</text>
+            <rect x="34" y="126" width="392" height="48" rx="8" fill="#fff" stroke="#9fb6cc"/>
+            <text x="230" y="158" font-size="20">VLA 推論・視触覚世界モデル</text>
+            <rect x="34" y="186" width="392" height="48" rx="8" fill="#fff" stroke="#9fb6cc"/>
+            <text x="230" y="218" font-size="20">操作・歩行コントローラ</text>
+            <rect x="10" y="306" width="440" height="64" rx="14" fill="#fff" stroke="#c4601a" stroke-width="3"/>
+            <text x="230" y="346" font-size="21" font-weight="700" fill="#c4601a">安全監視層（指令の範囲・トルクを検証）</text>
+            <line x1="230" y1="266" x2="230" y2="302" stroke="#1d2430" stroke-width="2.5" marker-end="url(#a)"/>
+            <rect x="10" y="410" width="440" height="90" rx="14" fill="#fdeedf" stroke="#c4601a" stroke-width="3"/>
+            <text x="230" y="448" font-size="24" font-weight="700" fill="#c4601a">STM32 等（CAN）</text>
+            <text x="230" y="480" font-size="18">高頻度の関節制御・通信途絶の監視</text>
+            <line x1="230" y1="370" x2="230" y2="406" stroke="#1d2430" stroke-width="2.5" marker-end="url(#a)"/>
+            <rect x="10" y="540" width="210" height="90" rx="14" fill="#fff" stroke="#5a6474" stroke-width="2"/>
+            <text x="115" y="578" font-size="22" font-weight="700">関節アクチュエータ</text>
+            <text x="115" y="608" font-size="18">BLDC＋減速機</text>
+            <line x1="115" y1="500" x2="115" y2="536" stroke="#1d2430" stroke-width="2.5" marker-end="url(#a)"/>
+            <rect x="240" y="540" width="210" height="90" rx="14" fill="#fff" stroke="#5a6474" stroke-width="2"/>
+            <text x="345" y="578" font-size="22" font-weight="700">センサ</text>
+            <text x="345" y="608" font-size="18">RGB-D・IMU・触覚</text>
+            <path d="M450,585 L480,585 L480,150 L454,150" fill="none" stroke="#1d2430" stroke-width="2.5" marker-end="url(#a)"/>
+            <rect x="500" y="10" width="130" height="620" rx="14" fill="#f2f3f5" stroke="#5a6474" stroke-width="2"/>
+            <text x="565" y="50" font-size="22" font-weight="700">電源</text>
+            <text x="565" y="84" font-size="17">バッテリー</text>
+            <text x="565" y="108" font-size="17">BMS・ヒューズ</text>
+            <text x="565" y="256" font-size="17" fill="#0e7fc0" font-weight="700">計算機系</text>
+            <text x="565" y="560" font-size="17" fill="#c4601a" font-weight="700">モータ系</text>
+            <text x="565" y="584" font-size="16" fill="#5a6474">系統を分ける</text>
+            <line x1="500" y1="236" x2="454" y2="200" stroke="#0e7fc0" stroke-width="3" stroke-dasharray="8 5"/>
+            <path d="M565,630 L565,650 L115,650 L115,634" fill="none" stroke="#c4601a" stroke-width="3" stroke-dasharray="8 5"/>
+            <text x="320" y="688" font-size="20" font-weight="700" fill="#c4601a">物理非常停止・モータ電源遮断</text>
+          </g>
+        </svg>
+      </figure>
+      <figcaption>学習済みモデルの関節指令は、そのままモータに通さず安全監視層で検証する。速い関節制御と安全停止はマイコン側に置く。</figcaption>
+    </section>
+
+    <section>
+      <h2><span class="n">6</span>アクチュエータ：自作と市販</h2>
+      <table>
+        <tr><th>方式</th><th>よい点</th><th>課題</th></tr>
+        <tr><td class="id">自作</td><td>機構を深く学べる、減速比を変えられる</td><td>摩耗、バックラッシュ、熱</td></tr>
+        <tr><td class="id">市販</td><td>調整が少なく、VLA に早く進める</td><td>費用、サイズ・重量の制約</td></tr>
+      </table>
+      <p class="small" style="margin-top:3mm"><b>市販アクチュエータで VLA を進めながら、自作の関節ユニットを並行して研究する。</b>2027 年 3 月の単関節評価で、どちらを主に使うか決める。</p>
+    </section>
+  </div>
+
+  <div>
+    <section>
+      <h2><span class="n">7</span>VLA で試すタスク</h2>
+      <p>最初は歩かせず、固定した上半身と両腕で物体を操作する。LeRobot でデータを集め、SmolVLA / ACT / Diffusion Policy を比べる。成否ラベルも記録し、将来は触覚・モータ電流も加える。</p>
+      <table>
+        <tr><th>タスク</th><th>指示の例</th><th>評価</th></tr>
+        <tr><td class="id">1 把持</td><td>「赤いブロックをつかんで」</td><td>把持成功率、位置誤差</td></tr>
+        <tr><td class="id">2 Pick &amp; Place</td><td>「青いブロックを右の箱へ」</td><td>識別・把持・配置の成功率</td></tr>
+        <tr><td class="id">3 両腕協調</td><td>「左手で箱を支え、右手で取り出して」</td><td>協調の成功率、接触の安定</td></tr>
+        <tr><td class="id">4 失敗回復</td><td>「滑った物体を持ち直して」</td><td>失敗検知率、回復成功率</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2><span class="n">8</span>視触覚世界モデルと失敗予測</h2>
+      <p>カメラ・関節状態・触覚（モータ電流）から潜在状態を学習し、操作の結果や失敗を予測する。本業の研究テーマをヒューマノイドに広げる部分。</p>
+      <div class="eq"><i>z</i><sub><i>t</i></sub> = <i>E</i>(<i>o</i><sub><i>t</i></sub>),&ensp; <i>ẑ</i><sub><i>t</i>+1</sub> = <i>F</i>(<i>z</i><sub><i>t</i></sub>, <i>a</i><sub><i>t</i></sub>)<br><i>e</i><sub><i>t</i></sub> = ‖<i>z</i><sub><i>t</i>+1</sub> − <i>ẑ</i><sub><i>t</i>+1</sub>‖²</div>
+      <p class="small">予測誤差 <i>e</i><sub><i>t</i></sub> は異常検知の特徴量に使う。誤差が大きいだけで失敗とは判定せず、タスク状態や接触情報と組み合わせる。対象は滑り・把持失敗・両腕協調の失敗と、そこからの回復。</p>
+    </section>
+
+    <section>
+      <h2><span class="n">9</span>注意していること</h2>
+      <ul>
+        <li><b>安全。</b>物理非常停止、関節トルク・角度の制限、温度監視。歩行実験は支持具・吊り具を使う</li>
+        <li><b>費用。</b>上半身まで累計 20〜50 万円、下半身まで 50〜100 万円以上の予算枠で段階的に買う</li>
+        <li><b>ライセンス。</b>BHL の CAD・コードを使うときは、リポジトリごとに確認する</li>
+      </ul>
+    </section>
+  </div>
+
+  <div>
+    <section>
+      <h2><span class="n">10</span>スケジュール</h2>
+      <ul class="tl">
+        <li class="now"><span class="when">2026/12〜2027/1：Phase 0 準備</span>参考設計の分析、MuJoCo / RViz2 で表示、初期 BOM。VLA は SO-101 で先に始める</li>
+        <li><span class="when">2027/1〜3：Phase 1 アクチュエータ</span>単関節を試作し、トルク・バックラッシュ・発熱を計測<span class="out">→ 自作か市販かを決める</span></li>
+        <li><span class="when">2027/3〜7：Phase 2・3 片腕 → 上半身</span>ROS 2 接続、両腕・胴体、テレオペで 50 エピソード／タスク</li>
+        <li><span class="when">2027/7〜10：Phase 4 VLA</span>実機データで SmolVLA / ACT を学習<span class="out">→ Task 1・2 で成功率 70% 以上</span></li>
+        <li><span class="when">2027/4〜12：Phase 5 下半身・歩行</span>シミュレーションで歩行 RL、脚部の印刷、全身組立、支持具付き歩行</li>
+        <li><span class="when">2028/1：完成</span>全身の統合試験とデモ</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="n">11</span>2028 年 1 月の完成条件</h2>
+      <div class="min">
+        <ul>
+          <li>全身のオリジナルヒューマノイドが組み上がっている</li>
+          <li>上半身が言語指示の Pick &amp; Place を成功率 70% 以上でこなす</li>
+          <li>支持具付きで立位保持と前進歩行（数メートル）</li>
+          <li>ROS 2・安全監視層・データ収集基盤が動き、リポジトリから再現できる</li>
+        </ul>
+      </div>
+      <p class="small" style="margin-top:3mm">歩きながらの操作（Phase 6）と、世界モデル・Agentic AI による自己改善（Phase 7）は 2028 年 2 月以降の延長目標。</p>
+    </section>
+
+
+    <div class="refs">
+      <ol>
+        <li>Y. Chi et al., Berkeley Humanoid Lite, arXiv:2504.17249, 2025.</li>
+        <li>Berkeley Humanoid Lite Arm, github.com/berkeley-humanoids</li>
+        <li>M. Shukor et al., SmolVLA, arXiv:2506.01844, 2025.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+</div>
+</body>
+</html>
