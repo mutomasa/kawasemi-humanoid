@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 750" width="1000" height="750" font-family="'Noto Sans JP','Hiragino Sans','Yu Gothic',sans-serif">
+  <title>Kawasemi Humanoid コンセプトイメージ</title>
+  <rect x="0" y="0" width="1000" height="750" rx="24" fill="#f5f9fc"/>
+  <text x="500" y="44" text-anchor="middle" font-size="26" font-weight="700" fill="#163f73">Kawasemi Humanoid — Concept</text>
+  <text x="500" y="70" text-anchor="middle" font-size="14" fill="#55606e">カワセミの配色とシルエットをモチーフにした3Dプリント製ヒューマノイド（イメージ）</text>
+
+  <g transform="translate(0,60)">
+    <!-- ===== 正面 ===== -->
+    <!-- 背中の翼型フィン -->
+    <path d="M188,172 C158,192 148,252 160,305 L180,210 Z" fill="#23b5c9"/>
+    <path d="M312,172 C342,192 352,252 340,305 L320,210 Z" fill="#23b5c9"/>
+    <!-- 腕 -->
+    <rect x="162" y="205" width="22" height="72" rx="10" fill="#1f5fa8"/>
+    <rect x="316" y="205" width="22" height="72" rx="10" fill="#1f5fa8"/>
+    <rect x="162" y="292" width="22" height="64" rx="10" fill="#23b5c9"/>
+    <rect x="316" y="292" width="22" height="64" rx="10" fill="#23b5c9"/>
+    <rect x="160" y="358" width="26" height="26" rx="9" fill="#c9ccd2"/>
+    <rect x="314" y="358" width="26" height="26" rx="9" fill="#c9ccd2"/>
+    <circle cx="173" cy="285" r="11" fill="#2f3238"/>
+    <circle cx="327" cy="285" r="11" fill="#2f3238"/>
+    <!-- 首 -->
+    <rect x="238" y="148" width="24" height="24" fill="#3a3d44"/>
+    <!-- 胴体 -->
+    <path d="M190,170 L310,170 L322,202 L178,202 Z" fill="#1f5fa8"/>
+    <path d="M182,200 L318,200 L300,300 Q250,330 200,300 Z" fill="#f08a24"/>
+    <path d="M222,200 L278,200 L250,238 Z" fill="#f4f4f0"/>
+    <rect x="215" y="300" width="70" height="30" rx="8" fill="#3a3d44"/>
+    <path d="M205,328 L295,328 L285,362 L215,362 Z" fill="#1f5fa8"/>
+    <!-- 肩関節 -->
+    <circle cx="178" cy="196" r="15" fill="#2f3238"/><circle cx="178" cy="196" r="5" fill="#23b5c9"/>
+    <circle cx="322" cy="196" r="15" fill="#2f3238"/><circle cx="322" cy="196" r="5" fill="#23b5c9"/>
+    <!-- 脚 -->
+    <rect x="212" y="372" width="26" height="82" rx="11" fill="#1f5fa8"/>
+    <rect x="262" y="372" width="26" height="82" rx="11" fill="#1f5fa8"/>
+    <rect x="213" y="472" width="24" height="72" rx="10" fill="#e8662a"/>
+    <rect x="263" y="472" width="24" height="72" rx="10" fill="#e8662a"/>
+    <path d="M198,545 L240,545 L243,560 L194,560 Z" fill="#d4541e"/>
+    <path d="M260,545 L302,545 L306,560 L257,560 Z" fill="#d4541e"/>
+    <circle cx="225" cy="366" r="12" fill="#2f3238"/><circle cx="275" cy="366" r="12" fill="#2f3238"/>
+    <circle cx="225" cy="463" r="12" fill="#2f3238"/><circle cx="275" cy="463" r="12" fill="#2f3238"/>
+    <!-- 頭部 -->
+    <ellipse cx="250" cy="105" rx="45" ry="48" fill="#1f5fa8"/>
+    <path d="M214,78 Q250,46 286,78 L280,86 Q250,62 220,86 Z" fill="#23b5c9"/>
+    <ellipse cx="208" cy="114" rx="9" ry="15" fill="#f08a24"/>
+    <ellipse cx="292" cy="114" rx="9" ry="15" fill="#f08a24"/>
+    <rect x="214" y="92" width="72" height="22" rx="11" fill="#12263f"/>
+    <circle cx="234" cy="103" r="5" fill="#5ff2ff"/>
+    <circle cx="266" cy="103" r="5" fill="#5ff2ff"/>
+    <ellipse cx="250" cy="139" rx="26" ry="12" fill="#f4f4f0"/>
+    <path d="M243,113 L257,113 L250,142 Z" fill="#2b2b30"/>
+    <line x1="150" y1="562" x2="350" y2="562" stroke="#b8c2cc" stroke-width="2"/>
+    <text x="250" y="592" text-anchor="middle" font-size="16" font-weight="700" fill="#163f73">正面</text>
+
+    <!-- ===== 側面（右向き） ===== -->
+    <!-- 尾羽型バッテリーパック -->
+    <path d="M590,215 L558,332 L576,338 L606,232 Z" fill="#163f73"/>
+    <!-- 背中の翼パネル -->
+    <path d="M594,176 C570,212 566,272 584,322 L600,302 C594,262 597,222 612,184 Z" fill="#1a4f8f"/>
+    <!-- 首 -->
+    <rect x="612" y="146" width="20" height="28" fill="#3a3d44"/>
+    <!-- 胴体 -->
+    <path d="M598,170 L648,170 Q668,232 655,300 L600,300 Q590,235 598,170 Z" fill="#f08a24"/>
+    <path d="M598,170 L622,170 L616,300 L600,300 Q590,235 598,170 Z" fill="#1f5fa8"/>
+    <path d="M603,172 L611,172 L606,298 L599,298 Z" fill="#23b5c9"/>
+    <path d="M630,170 L650,170 L656,198 Z" fill="#f4f4f0"/>
+    <path d="M600,300 L655,300 L650,336 L605,336 Z" fill="#1f5fa8"/>
+    <!-- 脚 -->
+    <rect x="615" y="350" width="26" height="82" rx="11" fill="#1f5fa8"/>
+    <rect x="616" y="450" width="24" height="92" rx="10" fill="#e8662a"/>
+    <path d="M606,542 L668,542 L674,560 L602,560 Z" fill="#d4541e"/>
+    <circle cx="628" cy="343" r="12" fill="#2f3238"/>
+    <circle cx="628" cy="441" r="12" fill="#2f3238"/>
+    <!-- 腕 -->
+    <rect x="614" y="200" width="22" height="72" rx="10" fill="#1f5fa8"/>
+    <rect x="614" y="284" width="22" height="62" rx="10" fill="#23b5c9" transform="rotate(-25 625 284)"/>
+    <circle cx="653" cy="347" r="12" fill="#c9ccd2"/>
+    <circle cx="625" cy="282" r="11" fill="#2f3238"/>
+    <circle cx="625" cy="192" r="15" fill="#2f3238"/><circle cx="625" cy="192" r="5" fill="#23b5c9"/>
+    <!-- 頭部 -->
+    <circle cx="620" cy="110" r="42" fill="#1f5fa8"/>
+    <path d="M583,96 Q620,58 657,92 L652,101 Q620,74 589,104 Z" fill="#23b5c9"/>
+    <ellipse cx="616" cy="118" rx="14" ry="9" fill="#f08a24"/>
+    <ellipse cx="596" cy="132" rx="9" ry="8" fill="#f4f4f0"/>
+    <path d="M628,140 Q648,150 660,128 L640,130 Z" fill="#f4f4f0"/>
+    <ellipse cx="644" cy="106" rx="16" ry="9" fill="#12263f"/>
+    <circle cx="650" cy="106" r="4" fill="#5ff2ff"/>
+    <path d="M654,100 L744,118 L654,132 Z" fill="#2b2b30"/>
+    <line x1="660" y1="116" x2="736" y2="118" stroke="#55585f" stroke-width="2"/>
+    <circle cx="672" cy="110" r="3.5" fill="#5ff2ff"/>
+    <line x1="530" y1="562" x2="760" y2="562" stroke="#b8c2cc" stroke-width="2"/>
+    <text x="640" y="592" text-anchor="middle" font-size="16" font-weight="700" fill="#163f73">側面</text>
+
+    <!-- ===== 注記 ===== -->
+    <g font-size="13" fill="#2f3238" stroke-width="1.2">
+      <line x1="728" y1="112" x2="780" y2="76" stroke="#8a96a3"/><circle cx="728" cy="112" r="2.5" fill="#8a96a3"/>
+      <text x="786" y="72">くちばし型ヘッド</text>
+      <text x="786" y="89" fill="#55606e" font-size="12">RGB-Dカメラ内蔵を想定</text>
+
+      <line x1="639" y1="192" x2="780" y2="170" stroke="#8a96a3"/><circle cx="639" cy="192" r="2.5" fill="#8a96a3"/>
+      <text x="786" y="166">関節ユニット</text>
+      <text x="786" y="183" fill="#55606e" font-size="12">BLDCアクチュエータ＋CAN</text>
+
+      <line x1="657" y1="250" x2="780" y2="258" stroke="#8a96a3"/><circle cx="657" cy="250" r="2.5" fill="#8a96a3"/>
+      <text x="786" y="256">オレンジの胸・腹カバー</text>
+      <text x="786" y="273" fill="#55606e" font-size="12">PETG / ASA 外装</text>
+
+      <line x1="637" y1="500" x2="780" y2="480" stroke="#8a96a3"/><circle cx="637" cy="500" r="2.5" fill="#8a96a3"/>
+      <text x="786" y="476">オレンジの脚・足</text>
+      <text x="786" y="493" fill="#55606e" font-size="12">カワセミの足の色</text>
+
+      <line x1="602" y1="225" x2="520" y2="230" stroke="#8a96a3"/><circle cx="602" cy="225" r="2.5" fill="#8a96a3"/>
+      <text x="514" y="226" text-anchor="end">背中のターコイズライン</text>
+      <text x="514" y="243" text-anchor="end" fill="#55606e" font-size="12">翼のような背面パネル</text>
+
+      <line x1="568" y1="310" x2="520" y2="330" stroke="#8a96a3"/><circle cx="568" cy="310" r="2.5" fill="#8a96a3"/>
+      <text x="514" y="327" text-anchor="end">尾羽型バッテリーパック</text>
+      <text x="514" y="344" text-anchor="end" fill="#55606e" font-size="12">重心調整を兼ねる</text>
+    </g>
+  </g>
+
+  <!-- ===== カラーパレット ===== -->
+  <g transform="translate(120,712)" font-size="12" fill="#2f3238">
+    <rect x="0" y="-16" width="22" height="22" rx="5" fill="#1f5fa8"/><text x="30" y="0">コバルトブルー #1F5FA8</text>
+    <rect x="190" y="-16" width="22" height="22" rx="5" fill="#23b5c9"/><text x="220" y="0">ターコイズ #23B5C9</text>
+    <rect x="360" y="-16" width="22" height="22" rx="5" fill="#f08a24"/><text x="390" y="0">オレンジ #F08A24</text>
+    <rect x="520" y="-16" width="22" height="22" rx="5" fill="#f4f4f0" stroke="#c9ccd2"/><text x="550" y="0">ホワイト #F4F4F0</text>
+    <rect x="670" y="-16" width="22" height="22" rx="5" fill="#2f3238"/><text x="700" y="0">チャコール #2F3238</text>
+  </g>
+</svg>
